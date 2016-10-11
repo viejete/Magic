@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.carlos.aplication1.MainActivityFragment"
+    tools:showIn="@layout/activity_main">
+
+    <Button
+        android:text="LIFE-"
+        android:layout_width="wrap_content"
+        android:id="@+id/lifeDec2"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/poisonDec2"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/lifeSteal2" />
+
+    <Button
+        android:text="LIFE-"
+        android:layout_width="wrap_content"
+        android:id="@+id/lifeDec1"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/poisonDec1"
+        app:layout_constraintBottom_toTopOf="@+id/lifeSteal1" />
+
+    <Button
+        android:text="POISON-"
+        android:layout_width="wrap_content"
+        android:id="@+id/poisonDec1"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/scorePlayer1"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/lifeDec1"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintRight_toLeftOf="@+id/lifeInc1"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/lifeSteal1"
+        app:layout_constraintVertical_bias="0.52" />
+
+    <Button
+        android:text="POISON+"
+        android:layout_width="wrap_content"
+        android:id="@+id/poisonInc1"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp" />
+
+    <Button
+        android:text="LIFE+"
+        android:layout_width="wrap_content"
+        android:id="@+id/lifeInc1"
+        android:layout_height="99dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/poisonInc1"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/lifeSteal1" />
+
+    <Button
+        android:text="POISON+"
+        android:layout_width="wrap_content"
+        android:id="@+id/poisonInc2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp" />
+
+    <Button
+        android:text="POISON-"
+        android:layout_width="wrap_content"
+        android:id="@+id/poisonDec2"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:text="LIFE+"
+        android:layout_width="wrap_content"
+        android:id="@+id/lifeInc2"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/poisonInc2"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/lifeSteal2" />
+
+    <TextView
+        android:id="@+id/scorePlayer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintRight_toLeftOf="@+id/poisonInc2"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/poisonDec2"
+        android:layout_marginLeft="8dp"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        android:elegantTextHeight="false"
+        tools:fontFamily="casual"
+        android:textColor="@android:color/holo_green_light"
+        android:textIsSelectable="false"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/lifeSteal2" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline"
+        app:layout_constraintGuide_begin="230dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="230dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:text="LIFESTEAL↑"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/lifeSteal1"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline" />
+
+    <Button
+        android:text="LIFESTEAL↓"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/lifeSteal2"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintHorizontal_bias="0.52"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/lifeSteal1" />
+
+
+</android.support.constraint.ConstraintLayout>
