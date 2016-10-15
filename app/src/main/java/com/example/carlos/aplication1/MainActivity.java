@@ -12,19 +12,30 @@ import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
 
-    @Override
+   /*@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+    }*/
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        int result = this.getResources().getConfiguration().orientation;
+        if (result == 1) {
+//set content view to portrait
+            setContentView(R.layout.fragment_main);
+        } else {
+//set content view to landscape}
+            setContentView(R.layout.horizontal);
+        }
     }
 
-    @Override
+    /*@Override
     public void onConfigurationChanged(Configuration newConfig){
         super.onConfigurationChanged(newConfig);
         setContentView(R.layout.horizontal);
-    }
+    }*/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
