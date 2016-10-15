@@ -3,4 +3,100 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="86dp">
+
+        <Button
+            android:text="POISON+"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/poisonInc1"
+            android:layout_weight="0.00" />
+
+        <Button
+            android:text="LIFE+"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/lifeInc1"
+            android:layout_weight="0.01" />
+
+        <Button
+            android:text="LIFE+"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/lifeInc2"
+            android:layout_weight="0.01" />
+
+        <Button
+            android:text="POISON+"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/poisonInc2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="158dp"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="289dp"
+            android:layout_height="match_parent"
+            android:id="@+id/scorePlayer1" />
+
+        <Button
+            android:layout_width="54dp"
+            android:layout_height="match_parent"
+            android:id="@+id/lifeSteal1"
+            android:text="←" />
+
+        <Button
+            android:text="→"
+            android:layout_height="match_parent"
+            android:id="@+id/lifeSteal2"
+            android:layout_width="55dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/scorePlayer2" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1">
+
+        <Button
+            android:text="POISON-"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/poisonDec1" />
+
+        <Button
+            android:text="LIFE-"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/lifeDec1"
+            android:layout_weight="0.51" />
+
+        <Button
+            android:text="LIFE-"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/lifeDec2"
+            android:layout_weight="0.48" />
+
+        <Button
+            android:text="POISON-"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/poisonDec2" />
+    </LinearLayout>
 </LinearLayout>
