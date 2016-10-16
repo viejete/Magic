@@ -1,17 +1,20 @@
 package com.example.carlos.aplication1;
 
+import android.support.annotation.Nullable;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-/**
- * A placeholder fragment containing a simple view.
- */
+
 public class MainActivityFragment extends Fragment {
 
     private Button poisonDec1 , lifeDec1 , poisonInc1 , lifeInc1 , poisonDec2 , lifeDec2 , poisonInc2 , lifeInc2 , lifeSteal1 , lifeSteal2;
@@ -19,6 +22,32 @@ public class MainActivityFragment extends Fragment {
     private int life1 = 20 , life2 = 20 , poison1 = 0  ,poison2 = 0;
 
     public MainActivityFragment() {
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Manejar si se toca el item de la barra de menú.
+        int id = item.getItemId();
+
+        if (id == R.id.restart) {
+            reset();
+            Snackbar.make(getView() , "App restarted" , Snackbar.LENGTH_SHORT).show();
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        // Inflar menú para el fragmento basado en el diseño XML.
+        inflater.inflate(R.menu.menu_main , menu);
+        super.onCreateOptionsMenu(menu, inflater);
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // Avisando a la activity que hay un menú.
+        setHasOptionsMenu(true);
     }
 
     @Override
@@ -39,8 +68,10 @@ public class MainActivityFragment extends Fragment {
 
         scorePlayer1 = (TextView) view.findViewById(R.id.scorePlayer1);
         scorePlayer1.setText(life1 + "/" + poison1);
+        scorePlayer1.setGravity(Gravity.CENTER);
         scorePlayer2 = (TextView) view.findViewById(R.id.scorePlayer2);
         scorePlayer2.setText(life2 + "/" + poison2);
+        scorePlayer2.setGravity(Gravity.CENTER);
 
         poisonDec1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -133,6 +164,15 @@ public class MainActivityFragment extends Fragment {
         });
 
         return view;
+    }
+
+    public void reset() {
+        life1 = 20;
+        life2 = 20;
+        poison1 = 0;
+        poison2 = 0;
+        scorePlayer1.setText(life1 + "/" + poison1);
+        scorePlayer2.setText(life2 + "/" + poison2);
     }
 
 }
